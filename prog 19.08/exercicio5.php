@@ -191,23 +191,23 @@ class Velho extends Imovel {
 
 
 echo " a) Assistente Administrativo e Técnico \n";
-$admin = new Administrativo("Giovana", 3000, "A456");
-$tecnico = new Tecnico("Giovani", 3200, "T538");
+$admin = new Administrativo("Giovana Bertolazi", 3000, "A456");
+$tecnico = new Tecnico("Laís Caetano", 3200, "T538");
 echo "Administrativo - Nome: {$admin->getNome()}, Matrícula: {$admin->getMatricula()}\n";
 echo "Técnico - Nome: {$tecnico->getNome()}, Matrícula: {$tecnico->getMatricula()}\n";
 
 echo "\n b) Cachorro e Gato \n";
-$dog = new Cachorro("Dino", "Vira-lata");
-$cat = new Gato("Mine", "Cinza");
+$dog = new Cachorro("Luna", "Golden Retriver");
+$cat = new Gato("Sam", "Frajola");
 echo $dog->late() . "\n";
 echo $dog->caminha() . "\n";
 echo $cat->mia() . "\n";
 echo $cat->caminha() . "\n";
 
 echo "\n c) Rica, Pobre e Miserável \n";
-$rica = new Rica("Laura", 30, 100000);
-$pobre = new Pobre("Carla", 25);
-$miseravel = new Miseravel("Joaquim", 50);
+$rica = new Rica("Ana Júlia", 27, 100000);
+$pobre = new Pobre("Bernardo", 23);
+$miseravel = new Miseravel("João", 43);
 echo $rica->fazCompras() . "\n";
 echo $pobre->trabalha() . "\n";
 echo $miseravel->mendiga() . "\n";
@@ -240,10 +240,11 @@ if ($tipoIngresso == 1) {
 echo "\n e) Imóvel \n";
 $tipoImovel = readline("Digite 1 para Imóvel Novo ou 2 para Imóvel Velho: ");
 if ($tipoImovel == 1) {
-    $novo = new Novo("Rua Boa Vista", 300000, 25000);
+    $novo = new Novo("Rua Frei Caneca, 1086", 300000, 25000);
     echo "Imóvel Novo - Preço final: R$ " . number_format($novo->precoFinal(), 2, ',', '.') . "\n";
 } elseif ($tipoImovel == 2) {
-    $velho = new Velho("Av. Central", 300000, 15000);
+    $velho = new Velho("Av. Leonel Brizola, 636", 300000, 15000);
     echo "Imóvel Velho - Preço final: R$ " . number_format($velho->precoFinal(), 2, ',', '.') . "\n";
 } 
+
 ?>
